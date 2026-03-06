@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="logo">Vignesh</div>
+
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Projects</li>
+    <li>Contact</li>
+    <li (click)="themeService.toggleTheme()" class="theme-toggle">
+      <span *ngIf="!themeService.isDarkMode()">🌙</span>
+      <span *ngIf="themeService.isDarkMode()">☀️</span>
+    </li>
+  </ul>
+</nav>

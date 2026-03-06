@@ -1,0 +1,84 @@
+:root {
+  /* Design Tokens as per spec */
+  --primary: #2a7be4;
+  --bg-primary: #f5f6f8;
+  --bg-secondary: #ffffff;
+  --text-dark: #111111;
+  --text-light: #666666;
+  --card-bg: #ffffff;
+  
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+
+  --nav-height: 70px;
+  --section-spacing: 100px;
+  --container-width: 1200px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-dark: #f1f5f9;
+  --text-light: #94a3b8;
+  --card-bg: #1e293b;
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease;
+}
+
+section {
+  padding: var(--section-spacing) 5%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Scroll Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

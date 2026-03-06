@@ -1,0 +1,63 @@
+.projects {
+  h2 {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+  }
+
+  p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .stack {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
